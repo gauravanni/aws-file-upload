@@ -6,8 +6,8 @@ const multerS3= require('multer-s3');
 const app= express();
 
 var s3Bucket = new AWS.S3({
-  "accessKeyId":"AKIAJDKDAOQ3RCBKTUJA",
-  "secretAccessKey":"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",
+  "accessKeyId":"AKIAIG6MU4PBHJNUSRBQ",
+  "secretAccessKey":"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",
   "region":"us-east-2"
 });
 
@@ -32,6 +32,6 @@ app.post('/upload', upload.array('file1',1),(req, res, next)=>{
   res.send("Uploaded!");
 });
 
-app.listen(3008,()=>{
+app.listen(8000,()=>{
 console.log('server started at port 3008');
 });
